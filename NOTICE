@@ -1,0 +1,38 @@
+NOTICE
+
+This repository preserves a small, abandoned digital artifact from April 2001: the in-browser Flash promo that warprecords.com served to announce Autechre's album "Confield" (Warp WARP CD 102, 2001-04-23). The artifact is no longer reachable from any active source on the open web. It is published here as a non-commercial act of digital preservation.
+
+THIRD-PARTY COPYRIGHTED MATERIAL
+
+The following files contain material owned by third parties. They are NOT covered by the LICENSE that applies to the rest of this repository. Each remains under its original copyright; inclusion here is intended to keep the artifact accessible to historians, archivists, and fans, and is not a claim of ownership.
+
+  original/conflashpin.swf
+    The Flash 4 promotional movie ("conflashpin"), 135360 bytes, stage 308x230 @ 12 fps. Copyright (c) 2001 Warp Records / Autechre. Recovered from: https://web.archive.org/web/20010414031825id_/http://www.warprecords.com/confield/conflashpin.swf
+
+  original/confield.html
+    The HTML embed page that loaded the SWF on warprecords.com. Copyright (c) 2001 Warp Records. Recovered from: https://web.archive.org/web/20010414031825id_/http://www.warprecords.com/confield/confield.html
+
+  web/confield.html
+  web/offline-bundle/conflashpin.swf
+    Wrappers / copies of the recovered SWF for in-browser playback via Ruffle. The wrapper code (HTML, CSS, JavaScript glue) is covered by the LICENSE; the embedded SWF payload retains its original copyright.
+
+  video/confield_promo.mp4
+    A muxed render combining the recovered SWF visuals (rendered through Ruffle and captured with ScreenCaptureKit) with the released Autechre album track "VI Scose Poise" (track 1, "Confield", Warp WARP CD 102, 2001). Visuals copyright (c) 2001 Warp Records / Autechre. Audio copyright (c) 2001 Warp Records / Autechre.
+
+WHAT IS LOST
+
+The original promotional audio shipped with the Flash promo as two separate SWF files:
+
+  http://www.warprecords.com/confield/audio1.swf
+  http://www.warprecords.com/confield/audio2.swf
+
+Neither file was ever successfully archived. The Wayback Machine's only captures of these URLs are HTTP 403 responses recorded on 2012-02-02 (see the Wayback CDX API for evidence). The released album track is used in video/confield_promo.mp4 as the closest available stand-in for the missing audio component, but it is not the original promo audio.
+
+REDISTRIBUTED TOOLS
+
+  web/offline-bundle/ruffle/
+    Ruffle (https://ruffle.rs), nightly build dated 2026-04-30. Ruffle is dual-licensed under the MIT License and the Apache License 2.0. Original license texts are preserved at web/offline-bundle/ruffle/LICENSE_MIT and web/offline-bundle/ruffle/LICENSE_APACHE.
+
+TAKEDOWN
+
+If you are a rights holder for any material in this repository and wish to discuss its preservation status or request its removal, please open an issue on the repository or contact the maintainer directly. Takedown requests will be honored.

@@ -1,0 +1,22 @@
+# Built artifacts
+sck_record
+*.dSYM/
+*.o
+
+# Scratch / intermediate captures
+*_raw.mp4
+*_test*.mp4
+*_test.mp4
+sck_test*
+visual_raw.mp4
+*_check.png
+*_check2.png
+*_probe.png
+
+# macOS
+.DS_Store
+
+# Editors
+*.swp
+.vscode/
+.idea/

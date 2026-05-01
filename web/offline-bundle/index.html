@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Warp Records - Autechre - Confield (2001 Flash promo)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  html, body { margin: 0; padding: 0; background: #000; color: #ccc;
+    font: 12px/1.4 Verdana, Geneva, sans-serif;
+    min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; }
+  #wrap { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  #stage { width: 616px; height: 460px; background: #fff;
+    box-shadow: 0 0 40px rgba(168, 5, 255, 0.35); }
+  #stage > * { width: 100%; height: 100%; display: block; }
+  .cap { font-size: 11px; color: #888; text-align: center; max-width: 616px; }
+  .cap b { color: #A805FF; letter-spacing: 1px; }
+  .err { color: #ff5050; padding: 20px; }
+  a { color: #A805FF; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <div id="stage"><div class="err" id="err">Loading Ruffle...</div></div>
+  <div class="cap">
+    <b>WARP RECORDS &middot; AUTECHRE &middot; CONFIELD</b><br>
+    Original Flash promo (conflashpin.swf, Flash 4, April 2001).<br>
+    Recovered from the Internet Archive's Wayback Machine and rendered with
+    <a href="https://ruffle.rs" target="_blank" rel="noopener">Ruffle</a>.
+    <br><br>
+    <em>Note: must be served from a local web server (run <code>./start.command</code> on macOS/Linux).</em>
+  </div>
+</div>
+<script>
+window.RufflePlayer = window.RufflePlayer || {};
+window.RufflePlayer.config = {
+  autoplay: "on",
+  unmuteOverlay: "visible",
+  contextMenu: "on",
+  warnOnUnsupportedContent: false,
+  logLevel: "error",
+  letterbox: "on",
+  scale: "showAll"
+};
+</script>
+<script src="ruffle/ruffle.js"></script>
+<script>
+function whenRuffleReady(cb) {
+  if (window.RufflePlayer && typeof window.RufflePlayer.newest === "function") return cb();
+  setTimeout(() => whenRuffleReady(cb), 50);
+}
+
+window.addEventListener("load", () => {
+  whenRuffleReady(async () => {
+    try {
+      const ruffle = window.RufflePlayer.newest();
+      const player = ruffle.createPlayer();
+      const stage = document.getElementById("stage");
+      stage.innerHTML = "";
+      stage.appendChild(player);
+
+      await player.ruffle().load({
+        url: "conflashpin.swf",
+        autoplay: "on",
+        unmuteOverlay: "visible",
+        letterbox: "on",
+        scale: "showAll"
+      });
+    } catch (e) {
+      const err = document.createElement("div");
+      err.className = "err";
+      err.textContent = "Failed to load: " + (e && e.message ? e.message : e);
+      const stage = document.getElementById("stage");
+      stage.innerHTML = "";
+      stage.appendChild(err);
+      console.error(e);
+    }
+  });
+});
+</script>
+</body>
+</html>
