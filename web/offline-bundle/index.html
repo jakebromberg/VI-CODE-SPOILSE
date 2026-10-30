@@ -20,6 +20,7 @@
 </style>
 </head>
 <body>
+<audio id="soundtrack" src="vi-code-spoilse.mp3" loop preload="auto"></audio>
 <div id="wrap">
   <div id="stage"><div class="err" id="err">Loading Ruffle...</div></div>
   <div class="cap">
@@ -31,6 +32,15 @@
     <em>Note: must be served from a local web server (run <code>./start.command</code> on macOS/Linux).</em>
   </div>
 </div>
+<script>
+  const audio = document.getElementById("soundtrack");
+
+  document.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play().catch(console.error);
+    }
+  }, { once: true });
+</script>
 <script>
 window.RufflePlayer = window.RufflePlayer || {};
 window.RufflePlayer.config = {
