@@ -23,14 +23,6 @@
 <audio id="soundtrack" src="vi-code-spoilse.mp3" loop preload="auto"></audio>
 <div id="wrap">
   <div id="stage"><div class="err" id="err">Loading Ruffle...</div></div>
-  <div class="cap">
-    <b>WARP RECORDS &middot; AUTECHRE &middot; CONFIELD</b><br>
-    Original Flash promo (conflashpin.swf, Flash 4, April 2001).<br>
-    Recovered from the Internet Archive's Wayback Machine and rendered with
-    <a href="https://ruffle.rs" target="_blank" rel="noopener">Ruffle</a>.
-    <br><br>
-    <em>Note: must be served from a local web server (run <code>./start.command</code> on macOS/Linux).</em>
-  </div>
 </div>
 <script>
   const audio = document.getElementById("soundtrack");
@@ -50,7 +42,8 @@ window.RufflePlayer.config = {
   warnOnUnsupportedContent: false,
   logLevel: "error",
   letterbox: "on",
-  scale: "showAll"
+  scale: "showAll",
+  splashScreen: false,
 };
 </script>
 <script src="ruffle/ruffle.js"></script>
